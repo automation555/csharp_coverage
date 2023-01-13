@@ -1,0 +1,154 @@
+{
+    "gammaAccess": {
+        "url": "",
+        "token": ""
+    },
+    "repositories": [
+        {
+            "dataDir": "%WORKSPACE%/data",
+            "repository": {
+                "uid": "",
+                "projectName": "coverlet-sample",
+                "languages": [
+                    "C_SHARP"
+                ],
+                "sources": {
+                    "baseDir": "%WORKSPACE%",
+                    "exclusions": [
+                        "(?i)(.g.cs|example|mock|assemblyinfo.cs|.AssemblyAttributes.cs|.AnyCPU.Debug|.AnyCPU.Release)"
+                    ]
+                }
+            },
+            "settings": {
+                "additionalOptions": [],
+                "includePaths": []
+            },
+            "modules": {
+                "codeissues": [
+                    {
+                        "name": "microsoft_security_codescan",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "gamma_cs",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    },
+                    {
+                        "name": "gamma_generic",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "unittest": [
+                    {
+                        "name": "mstest",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "report_processor": [
+                    {
+                        "name": "ext_report_processor",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "dem.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "dem.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "memory.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "memory.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "ameos.reportDir",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                },
+                                {
+                                    "name": "ameos.reportFile",
+                                    "type": "upload",
+                                    "value": "",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "relevance": [
+                    {
+                        "name": "relevance",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    }
+                ],
+                "coverage": [
+                    {
+                        "name": "coverlet",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "%WORKSPACE%/TestResults",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
